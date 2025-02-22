@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+  font-family: "Outfit", serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  background-image: url(./resources/Background_image@2x.png);
+  background-color: #121826;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  place-content: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.title--header{
+  padding: 2rem;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  grid-column: span 4;
+}
+
+.title--header h1{
+  color: white;
+  line-height: 1.6;
+  letter-spacing: 3px;
+}
+
+.title--header span{
+  color: #9DA3AE;
+}
+
+
+
+
+
+.card{
+  background-color: #212936;
+  max-width: 360px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  border-radius: 12px;
+  box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.15);
+}
+
+.card img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.icon-con{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+.clap{
+  background-color: #FCEED8;
+
+}
+
+.msg{
+  background-color: #FBE5E6;
+}
+
+.goal{
+  background-color: #DEE9FC;
+}
+
+.title{
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.desc{
+  color: #D2D5DA;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    gap: 1rem; /* Reduce gap between cards */
+  }
+
+  .title--header h1 {
+    font-size: 28px; /* Adjust font size for smaller screens */
+  }
+
+  .title--header span {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Display cards in a single column */
+    grid-template-rows: 1fr;
+    gap: 1rem; /* Reduce gap between cards */
+  }
+
+  .title--header h1 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .title--header span {
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+
+  .title {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .desc {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr; /* Display cards in a single column */
+    gap: 1rem; /* Reduce gap between cards */
+  }
+  .title--header{
+    grid-column: 1;
+  }
+  .title--header h1 {
+    font-size: 20px; /* Adjust font size for very small screens */
+    letter-spacing: 1px; /* Reduce letter spacing */
+  }
+
+  .title--header span {
+    font-size: 12px; /* Adjust font size for very small screens */
+  }
+
+  .card {
+    padding: 1rem; /* Adjust padding for very small screens */
+  }
+
+  .title {
+    font-size: 16px; /* Adjust font size for very small screens */
+  }
+
+  .desc {
+    font-size: 12px; /* Adjust font size for very small screens */
+  }
+}
